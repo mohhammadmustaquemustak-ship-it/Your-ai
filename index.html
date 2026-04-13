@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuddyAI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header>
+            <h1>BuddyAI</h1>
+            <div class="mood-selector">
+                <button class="mood-btn" id="btn-roast" onclick="setMood('roast')">😂 ROAST</button>
+                <button class="mood-btn active" id="btn-friend" onclick="setMood('friend')">🤝 FRIEND</button>
+                <button class="mood-btn" id="btn-smart" onclick="setMood('smart')">🧠 SMART</button>
+                <button class="mood-btn" id="btn-emotional" onclick="setMood('emotional')">😢 EMOTIONAL</button>
+            </div>
+        </header>
+
+        <div class="chat-box" id="chat-box">
+            <div class="message ai-message">
+                Hello! I am BuddyAI. Select a mood above and let's chat!
+            </div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Type your message here..." onkeypress="handleKeyPress(event)">
+            <button id="send-btn" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
